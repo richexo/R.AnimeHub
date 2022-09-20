@@ -1,0 +1,120 @@
+div.header {
+    margin: 0;
+    padding: 0;
+    scroll-snap-align: start;
+    background-image: linear-gradient(215deg,
+            hsl(0deg 0% 1%) 0%,
+            hsl(168deg 23% 5%) 13%,
+            hsl(168deg 20% 9%) 19%,
+            hsl(169deg 25% 11%) 24%,
+            hsl(169deg 28% 14%) 28%,
+            hsl(170deg 31% 16%) 32%,
+            hsl(170deg 34% 19%) 35%,
+            hsl(170deg 36% 22%) 39%,
+            hsl(170deg 38% 24%) 42%,
+            hsl(171deg 40% 27%) 45%,
+            hsl(171deg 42% 30%) 48%,
+            hsl(171deg 43% 33%) 52%,
+            hsl(171deg 45% 35%) 55%,
+            hsl(171deg 46% 38%) 58%,
+            hsl(171deg 47% 41%) 61%,
+            hsl(171deg 49% 44%) 65%,
+            hsl(172deg 50% 46%) 68%,
+            hsl(172deg 51% 49%) 72%,
+            hsl(172deg 57% 52%) 76%,
+            hsl(172deg 65% 55%) 81%,
+            hsl(172deg 74% 58%) 87%,
+            hsl(172deg 85% 61%) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'DynaPuff', cursive;
+}
+
+div.header h1 {
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3.1rem;
+
+}
+
+div.header h1 strong {
+    font-family: 'Nosifer', cursive;
+    font-size: 10rem;
+    font-weight: 700;
+    color: #080808;
+
+}
+
+div.header p {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bolder;
+    margin-left: 2rem;
+}
+
+div.all {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-top: 5px;
+    width:18rem;
+    height: fit-content;
+padding: 6px;
+    background-color: black;
+    border-bottom: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+div.all strong{
+    font-size: larger;
+    color:lightgray;
+  
+    font-family: Montserrat Alternates;
+}
+div.all p.one {
+    color: white;
+    font-size: small;
+   margin: 0;
+ 
+
+
+}
+
+@media screen and (min-width:650px) {
+    div.header h1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 4rem;
+
+    }
+
+
+}
+
+div.header p.two {
+    transform: translate(-140px, -15px);
+    font-size: smaller;
+    margin-bottom: 3rem;
+    padding-left: 10px;
+}
+
+div.header p.two strong {
+    font-size: x-large;
+
+}
+
+
+
+
+
+
+
+
