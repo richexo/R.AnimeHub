@@ -31,11 +31,12 @@ div.header {
     align-items: center;
     flex-wrap: wrap;
     font-family: 'DynaPuff', cursive;
+    overflow: hidden;
 }
 
 div.header h1 {
-    position: relative;
-    text-align: center;
+    margin-inline-start: 2rem;
+
     font-weight: 600;
     font-size: 3.1rem;
     
@@ -48,27 +49,34 @@ div.header h1 strong {
     color: #080808;
     
 }
-@media screen and (min-width:650px) {
-    div.header h1 {
-        text-align: center;
+
+
+@media screen and (min-width:805px) {
+    div.header h1{
+        margin-inline-start: 5rem;
+     
+    }
+}
+
+
+@media screen and (min-width:580px) {
+    div.header h1{
+        margin-block-start:5rem ;
         font-weight: 600;
         font-size: 4rem;
-
     }
-
-
 }
 @media screen and (max-width:450px) {
     div.header h1{
-        font-size: 2.7rem;
+        font-size: 2rem;
     }
     div.header h1 strong{
-        font-size: 8.5rem;
+        font-size: 7rem;
     }
 }
-@media screen and (max-width:385px) {
+@media screen and (min-width:385px) {
     div.header h1{
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     div.header h1 strong{
         font-size: 8rem;
@@ -79,7 +87,7 @@ div.header h1 strong {
         font-size: 2rem;
     }
     div.header h1 strong{
-        font: 6rem;
+        font-size: 5rem;
     }
 }
 
@@ -125,28 +133,34 @@ div.all p.one {
 
 div.header p.two {
     position: absolute;
-    bottom: 10px;
-    left: 0px;
-    font-size: smaller;
+    bottom: 50px;
+    left: 20px;
+    font-size: small;
 }
 
 div.header p.two strong {
     font-size: large;
-
+    
 }
 @media screen and (min-width: 580px) {
     div.header p.two {
-        position: absolute;
-        top: 12rem;
-        left: 20rem;
-        font-size: 13px;
+        position: static;
+        transform: translate(150px, -290px);
+        font-size: 14px;
     }
     div.header p.two strong {
         font-size: x-large;
     
     }
 }
-
+@media screen and (min-width: 821px) {
+    div.header p.two {
+        position: static;
+        transform: translate(150px, -290px);
+        font-size: 14px;
+    
+    }
+}
 
 
 

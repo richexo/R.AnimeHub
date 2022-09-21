@@ -12,7 +12,7 @@ div.animelist a {
 }
 @media screen and (max-width:438px) {
     div.animelist a{
-        margin: 2rem;
+        margin: 1.5rem;
     }  
 }
 
