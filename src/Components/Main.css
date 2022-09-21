@@ -31,6 +31,17 @@ div.main h2 b {
    font-size: 3rem;
    color: black;
 }
+@media screen and (max-width:400px) {
+   div.main h2{
+      font-size:1.8rem ;
+   }
+   #R{
+      font-size: 2.8rem;
+   }
+   div.main h2 b{
+      font-size: 1.8rem;
+   }
+}
 
 div.animesearch {
    margin-block-start: 5px;
@@ -81,7 +92,7 @@ div.faicon {
    align-items: center;
    font-size: 15px;
    position: absolute;
-   right: 0px;
+   right: 3px;
 
 }
 

@@ -38,7 +38,7 @@ div.header h1 {
     text-align: center;
     font-weight: 600;
     font-size: 3.1rem;
-
+    
 }
 
 div.header h1 strong {
@@ -46,14 +46,40 @@ div.header h1 strong {
     font-size: 10rem;
     font-weight: 700;
     color: #080808;
+    
+}
+@media screen and (min-width:650px) {
+    div.header h1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 4rem;
+
+    }
+
 
 }
-@media screen and (max-width:438px) {
+@media screen and (max-width:450px) {
     div.header h1{
         font-size: 2.7rem;
     }
     div.header h1 strong{
-        font-size: 8.8rem;
+        font-size: 8.5rem;
+    }
+}
+@media screen and (max-width:385px) {
+    div.header h1{
+        font-size: 2.2rem;
+    }
+    div.header h1 strong{
+        font-size: 8rem;
+    }
+}
+@media screen and (max-width:325px) {
+    div.header h1{
+        font-size: 2rem;
+    }
+    div.header h1 strong{
+        font: 6rem;
     }
 }
 
@@ -96,34 +122,30 @@ div.all p.one {
 
 }
 
-@media screen and (min-width:650px) {
-    div.header h1 {
-        text-align: center;
-        font-weight: 600;
-        font-size: 4rem;
-
-    }
-
-
-}
 
 div.header p.two {
-    transform: translate(-140px, -15px);
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
     font-size: smaller;
-    margin-bottom: 3rem;
-    padding-left: 10px;
 }
 
 div.header p.two strong {
-    font-size: x-large;
+    font-size: large;
 
 }
-@media screen and (max-width:438px) {
-    div.header p.two strong{
-        font-size: large;
+@media screen and (min-width: 580px) {
+    div.header p.two {
+        position: absolute;
+        top: 12rem;
+        left: 20rem;
+        font-size: 13px;
+    }
+    div.header p.two strong {
+        font-size: x-large;
+    
     }
 }
-
 
 
 
