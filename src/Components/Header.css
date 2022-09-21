@@ -26,20 +26,27 @@ div.header {
             hsl(172deg 74% 58%) 87%,
             hsl(172deg 85% 61%) 100%);
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     font-family: 'DynaPuff', cursive;
-    overflow: hidden;
+   
+    outline: 5px solid black;
+}
+
+div.rname {
+    height: fit-content;
+   display: block;
+   max-width: 50rem;
+   margin: 0 auto;
+   position: absolute;
+   top: 10rem;
+   left: 20px;
+   right: 20px;
+   text-align: center;
 }
 
 div.header h1 {
-    margin-inline-start: 2rem;
-
     font-weight: 600;
     font-size: 3.1rem;
-    
+
 }
 
 div.header h1 strong {
@@ -47,54 +54,52 @@ div.header h1 strong {
     font-size: 10rem;
     font-weight: 700;
     color: #080808;
-    
+
 }
+@media screen and (max-width:1024px) {
+    div.header h1 {
+        font-size: 5rem;
+    }
 
-
-@media screen and (min-width:805px) {
-    div.header h1{
-        margin-inline-start: 5rem;
-     
+    div.header h1 strong {
+        font-size:10rem;
     }
 }
 
+@media screen and (max-width:425px) {
+    div.header h1 {
+        font-size: 2.8rem;
+    }
 
-@media screen and (min-width:580px) {
-    div.header h1{
-        margin-block-start:5rem ;
-        font-weight: 600;
-        font-size: 4rem;
+    div.header h1 strong {
+        font-size: 7.5rem;
     }
 }
-@media screen and (max-width:450px) {
-    div.header h1{
-        font-size: 2rem;
+
+@media screen and (max-width:375px) {
+    div.header h1 {
+        font-size: 2.4rem;
     }
-    div.header h1 strong{
+
+    div.header h1 strong {
         font-size: 7rem;
     }
 }
-@media screen and (min-width:385px) {
-    div.header h1{
+
+@media screen and (max-width:320px) {
+    div.header h1 {
         font-size: 2rem;
     }
-    div.header h1 strong{
-        font-size: 8rem;
+
+    div.header h1 strong {
+        font-size: 6rem;
     }
 }
-@media screen and (max-width:325px) {
-    div.header h1{
-        font-size: 2rem;
-    }
-    div.header h1 strong{
-        font-size: 5rem;
-    }
-}
+
 
 div.header p {
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: bolder;
-    margin-left: 2rem;
 }
 
 div.all {
@@ -103,9 +108,9 @@ div.all {
     top: 10px;
     right: 10px;
     margin-top: 5px;
-    width:18rem;
-    height: fit-content;
-padding: 6px;
+    width: 18rem;
+    max-height: 10rem;
+    padding: 6px;
     background-color: black;
     border-bottom: 1px solid white;
     border-radius: 30px;
@@ -115,19 +120,28 @@ padding: 6px;
     cursor: pointer;
 
 }
-div.all strong{
+
+div.all strong {
     font-size: larger;
-    color:lightgray;
-  
+    color: lightgray;
+
     font-family: Montserrat Alternates;
 }
+
 div.all p.one {
     color: white;
     font-size: small;
-   margin: 0;
- 
-
-
+    margin: 0;
+}
+@media screen and (max-width:1024px) {
+    div.all p.one {
+        font-size: medium;
+    }
+}
+@media screen and (max-width:320px) {
+    div.all p.one {
+        font-size: small;
+    }
 }
 
 
@@ -140,30 +154,41 @@ div.header p.two {
 
 div.header p.two strong {
     font-size: large;
-    
+
 }
-@media screen and (min-width: 580px) {
-    div.header p.two {
-        position: static;
-        transform: translate(150px, -290px);
-        font-size: 14px;
+@media screen and (min-width:1024px) {
+    div.header p.two{
+        transform: translate(43rem, -18rem);
+         font-weight: bolder;
+     }
+     
+}
+
+
+@media screen and (min-width:768px) {
+    div.header p.two{
+        font-size: large;
+        font-weight: bolder;
     }
-    div.header p.two strong {
+    div.header p.two strong{
         font-size: x-large;
-    
     }
 }
-@media screen and (min-width: 821px) {
-    div.header p.two {
-        position: static;
-        transform: translate(150px, -290px);
-        font-size: 14px;
     
+    @media screen and (max-width:425px) {
+        div.header p.two{
+            font-size: medium;
+            font-weight: bolder;
+        }
     }
-}
-
-
-
-
+    @media screen and (max-width:320px) {
+        div.header p.two {
+            font-size: small;
+           
+        }
+        div.header p.two strong{
+            font-size: medium;
+        }
+    }
 
 

@@ -4,7 +4,9 @@ const Header = ({quote, getQuote}) => {
   return (
     <div className='header'>
 
-      <h1 className="sname"><strong>R</strong>. AnimeHub</h1><br />
+     <div className="rname">
+       <h1 ><strong>R</strong>. AnimeHub</h1><br />
+       </div>
        <div className="all"  onClick={getQuote}>
      <strong>Quotes</strong>   
         <p className="one">{quote}</p>
