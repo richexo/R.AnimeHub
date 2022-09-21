@@ -92,13 +92,13 @@ div.faicon {
    align-items: center;
    font-size: 15px;
    position: absolute;
-   right: 3px;
+   right: 10px;
 
 }
 
 div.times {
    position: absolute;
-   right: 30px;
+   right: 40px;
    transform: translate(-2px, 7px);
    color: red;
 }
