@@ -6,42 +6,60 @@ div.main_container {
    display: block;
    margin-block-start: 2rem;
 }
+@media screen and (min-width:1024px) {
+   div.main_container{
+      margin-block-start: 3rem;
+
+   }
+}
 
 div.main h2 {
    font-family: Montserrat Alternates;
    font-weight: 500;
-   font-size: 2.6rem;
-   line-height: 4rem;
+   font-size: 2rem;
+   line-height: 5rem;
    border-bottom: 3px solid gray;
-   max-width: 20rem;
+   max-width: 30rem;
    margin: 0 auto;
    text-align: center;
-
    margin-block-start: 1rem;
    color: hsl(0, 4%, 78%);
 }
+@media screen and (max-width:320px) {
+   div.main h2{
+      font-size: 1.7rem;
+   }
+}
+
+
 
 div.main h2 b {
    font-size: 2.2rem;
    color: black;
 }
+@media screen and (max-width:320px) {
+   div.main h2 b{
+      font-size: 2rem;
+   }
+}
+
+
+
 
 #R {
    font-family: Nosifer;
-   font-size: 3rem;
+   font-size: 3.5rem;
    color: black;
 }
-@media screen and (max-width:400px) {
-   div.main h2{
-      font-size:1.8rem ;
-   }
+@media screen and (max-width:320px) {
    #R{
-      font-size: 2.8rem;
-   }
-   div.main h2 b{
-      font-size: 1.8rem;
+      font-size: 3rem;
    }
 }
+
+
+
+
 
 div.animesearch {
    margin-block-start: 5px;
@@ -75,6 +93,14 @@ div.main input {
    right: 30px;
 
 }
+@media screen and (min-width:768px) {
+   div.main input{
+      width: 25rem;
+      font-size: 1.2rem;
+
+
+   }
+}
 
 div.faicon {
    height: 30px;
@@ -95,12 +121,26 @@ div.faicon {
    right: 10px;
 
 }
+@media screen and (min-width:768px) {
+   div.faicon{
+      height: 40px;
+      width: 2.5rem;
+      font-size: 1.3rem;
 
+   }
+}
 div.times {
    position: absolute;
    right: 40px;
-   transform: translate(-2px, 7px);
+   transform: translate(-7px, 9px);
    color: red;
+}
+@media screen and (min-width:768px) {
+   div.times{
+     
+      font-size: 1.3rem;
+
+   }
 }
 
 input:focus {
@@ -112,7 +152,7 @@ div.faicon:active {
    background-color: orangered;
 }
 
-@media screen and (min-width:970px) {
+@media screen and (min-width:1024px) {
    div.main_container {
       display: flex;
    }

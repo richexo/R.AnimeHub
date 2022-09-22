@@ -10,11 +10,27 @@ div.animelist a {
     color: black;
 
 }
-@media screen and (max-width:438px) {
+@media screen and (max-width:320px) {
     div.animelist a{
         margin: 1.5rem;
+        
     }  
+
 }
+@media screen and (min-width:425px) {
+  div.animelist a{
+    margin-inline: 1.5rem;
+  }  
+}
+@media screen and (min-width:768px) {
+    div.animelist a{
+      margin-inline: 1.75rem;
+    }  
+  }
+  
+  
+  
+
 
 div.list {
     width: fit-content;
@@ -42,11 +58,20 @@ div.list a img {
 img:hover {
     transform: scale(1.1);
 }
-@media screen and (max-width:438px) {
+@media screen and (max-width:320px) {
     div.list a img{
-        width: 8rem;
+        width: 10rem;
+        height: 15rem;
+        margin-inline-start: 2.5rem;
     }
 }
+@media screen and (min-width:375px) {
+    div.list a img{
+        width:7rem ;
+        height:11rem ;
+    }
+}
+
 
 div.list h3 {
     border-radius: 5px;
@@ -63,6 +88,11 @@ div.list p {
     font-size: 10px;
 
 }
+@media screen and (min-width:768px) {
+    div.list p{
+        font-size: 13px;
+    }
+}
 
 div.list p.storyline {
     height: fit-content;
@@ -76,11 +106,30 @@ div.list p.storyline {
     word-spacing: 1px;
 }
 
-@media screen and (min-width:970px) {
-    div.list a img {
-        width: 8rem;
-        height: 14rem
+
+@media screen and (max-width:320px) {
+    div.list p.storyline{
+        max-width: 15rem;
     }
 }
 
-@media screen and (max-width:969) {}
+@media screen and (min-width:375px) {
+    div.list p.storyline{
+        font-size: 12.5px;
+    }
+    
+}
+
+@media screen and (max-width:320px) {
+    div.list h3{
+        max-width: 20rem;
+        font-weight: bolder;
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:375px) {
+    div.list h3{
+        max-width: 9.6rem;
+        font-size: 13px;
+    }
+}
