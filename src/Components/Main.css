@@ -79,6 +79,8 @@ form {
 
 div.main input {
    text-transform: capitalize;
+   box-shadow: none;
+   outline: 1px solid black;
    padding: 2px;
    width: 15rem;
    font-size: 1rem;
