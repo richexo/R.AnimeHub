@@ -80,7 +80,6 @@ form {
 div.main input {
    text-transform: capitalize;
    box-shadow: none;
-   outline: 1px solid black;
    padding: 2px;
    width: 15rem;
    font-size: 1rem;
@@ -133,12 +132,13 @@ div.faicon {
    }
 }
 div.times {
-   height: 28.5px;
-   width: 1.5rem;
-   background-color: white;
+   height: 20px;
+   width: 2rem;
+   background-color: whitesmoke;
    position: absolute;
    right: 30px;
-   transform: translateY(2px);
+   margin-top: 6px;
+   margin-bottom: 6px;
    color: red;
    display: flex;
    justify-content: center;
