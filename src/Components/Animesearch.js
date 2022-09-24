@@ -19,7 +19,6 @@ function Animesearch({ search, animeList }) {
             </a>
           )
           )
-          // .filter(aiiunime =>( anime.title === search)  )
           
         }
 
