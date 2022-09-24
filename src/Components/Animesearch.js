@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Animesearch.css"
-function Animesearch({ search, animeList }) {
+function Animesearch({ search, animeList, setSearch, setAnimeList }) {
   return (
     <div className='animelist'>
      
