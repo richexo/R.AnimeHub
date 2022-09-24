@@ -79,6 +79,7 @@ form {
 
 div.main input {
    text-transform: capitalize;
+   padding: 2px;
    width: 15rem;
    font-size: 1rem;
    font-family: Poppins;
@@ -103,8 +104,8 @@ div.main input {
 }
 
 div.faicon {
-   height: 30px;
-   width: 2rem;
+   height: 33px;
+   width: 32px;
    color: white;
    background-color: chocolate;
    -webkit-border-top-right-radius: 10px;
@@ -118,35 +119,43 @@ div.faicon {
    align-items: center;
    font-size: 15px;
    position: absolute;
-   right: 10px;
+   right: 0px;
 
 }
 @media screen and (min-width:768px) {
    div.faicon{
-      height: 40px;
+      height: 37px;
       width: 2.5rem;
       font-size: 1.3rem;
 
    }
 }
 div.times {
+   height: 28.5px;
+   width: 1.5rem;
+   background-color: white;
    position: absolute;
-   right: 40px;
-   transform: translate(-7px, 9px);
+   right: 30px;
+   transform: translateY(2px);
    color: red;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 @media screen and (min-width:768px) {
    div.times{
-     
+      transform: translate(-10px, 2px);
       font-size: 1.3rem;
 
    }
 }
-
+/* 
 input:focus {
    background-color: black;
    color: white;
-}
+
+} */
+
 
 div.faicon:active {
    background-color: orangered;
@@ -159,13 +168,10 @@ div.faicon:active {
 
    div.Topanime {
       order: 1;
-
-
    }
 
    div.animesearch {
       order: 2;
-
    }
 
 }

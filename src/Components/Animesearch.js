@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Animesearch.css"
-function Animesearch({ searchHandler, search, animeList, setSearch, setAnimeList }) {
+function Animesearch({ search, animeList }) {
   return (
     <div className='animelist'>
      
@@ -18,9 +18,11 @@ function Animesearch({ searchHandler, search, animeList, setSearch, setAnimeList
               <p>{anime.rated}</p>
             </a>
           )
-
           )
+          // .filter(aiiunime =>( anime.title === search)  )
+          
         }
+
       </div>
     </div>
   )
