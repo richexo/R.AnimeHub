@@ -27,20 +27,20 @@ div.header {
             hsl(172deg 85% 61%) 100%);
     min-height: 100vh;
     font-family: 'DynaPuff', cursive;
-   
+
     outline: 5px solid black;
 }
 
 div.rname {
     height: fit-content;
-   display: block;
-   max-width: 50rem;
-   margin: 0 auto;
-   position: absolute;
-   top: 10rem;
-   left: 20px;
-   right: 20px;
-   text-align: center;
+    display: block;
+    max-width: 50rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 10rem;
+    left: 20px;
+    right: 20px;
+    text-align: center;
 }
 
 div.header h1 {
@@ -56,45 +56,7 @@ div.header h1 strong {
     color: #080808;
 
 }
-@media screen and (max-width:1024px) {
-    div.header h1 {
-        font-size: 5rem;
-    }
 
-    div.header h1 strong {
-        font-size:10rem;
-    }
-}
-
-@media screen and (max-width:425px) {
-    div.header h1 {
-        font-size: 2.8rem;
-    }
-
-    div.header h1 strong {
-        font-size: 7.5rem;
-    }
-}
-
-@media screen and (max-width:375px) {
-    div.header h1 {
-        font-size: 2.4rem;
-    }
-
-    div.header h1 strong {
-        font-size: 7rem;
-    }
-}
-
-@media screen and (max-width:320px) {
-    div.header h1 {
-        font-size: 2rem;
-    }
-
-    div.header h1 strong {
-        font-size: 6rem;
-    }
-}
 
 
 div.header p {
@@ -116,10 +78,27 @@ div.all {
     border-radius: 30px;
     color: white;
     text-align: center;
-    overflow: hidden;
+    overflow-y: scroll;
     cursor: pointer;
 
 }
+
+div.all::-webkit-scrollbar {
+    width: .8rem;
+}
+
+div.all::-webkit-scrollbar-track {
+    border-radius: 30px;
+    margin-block: 20px;
+
+}
+
+div.all::-webkit-scrollbar-thumb {
+    background-color: rgb(54, 52, 52);
+    border-radius: 30px;
+
+}
+
 
 div.all strong {
     font-size: larger;
@@ -133,16 +112,8 @@ div.all p.one {
     font-size: small;
     margin: 0;
 }
-@media screen and (max-width:1024px) {
-    div.all p.one {
-        font-size: medium;
-    }
-}
-@media screen and (max-width:320px) {
-    div.all p.one {
-        font-size: small;
-    }
-}
+
+
 
 
 div.header p.two {
@@ -156,39 +127,89 @@ div.header p.two strong {
     font-size: large;
 
 }
+/* MEDIA QUERY */
+
 @media screen and (min-width:1024px) {
-    div.header p.two{
+    div.header p.two {
         transform: translate(43rem, -18rem);
-         font-weight: bolder;
-     }
-     
+        font-weight: bolder;
+    }
+
 }
 
 
 @media screen and (min-width:768px) {
-    div.header p.two{
+    div.header p.two {
         font-size: large;
         font-weight: bolder;
     }
-    div.header p.two strong{
+
+    div.header p.two strong {
         font-size: x-large;
     }
 }
+
+
+
+
+@media screen and (max-width:1024px) {
+    div.header h1 {
+        font-size: 5rem;
+    }
+
+    div.header h1 strong {
+        font-size: 10rem;
+    }
+    div.all p.one {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width:425px) {
+    div.header h1 {
+        font-size: 2.8rem;
+    }
+
+    div.header h1 strong {
+        font-size: 7.5rem;
+    }
+    div.header p.two {
+        font-size: medium;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (max-width:375px) {
+    div.header h1 {
+        font-size: 2.4rem;
+    }
+
+    div.header h1 strong {
+        font-size: 7rem;
+    }
+}
+
+
+
+@media screen and (max-width:320px) {
     
-    @media screen and (max-width:425px) {
-        div.header p.two{
-            font-size: medium;
-            font-weight: bolder;
-        }
-    }
-    @media screen and (max-width:320px) {
-        div.header p.two {
-            font-size: small;
-           
-        }
-        div.header p.two strong{
-            font-size: medium;
-        }
+
+    div.header p.two {
+        font-size: small;
+
     }
 
+    div.header p.two strong {
+        font-size: medium;
+    }
+    div.header h1 {
+        font-size: 2rem;
+    }
 
+    div.header h1 strong {
+        font-size: 6rem;
+    }
+    div.all p.one {
+        font-size: small;
+    }
+}

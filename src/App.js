@@ -17,24 +17,24 @@ function App() {
     }
   };
   const getTopanime = async () => {
-    const rank = await fetch('https://jikan1.p.rapidapi.com/top/anime/1/bypopularity', options)
+    await fetch('https://jikan1.p.rapidapi.com/top/anime/1/bypopularity', options)
       .then(response => response.json())
       .then(response => setTopAnime(response.top.slice(0, 8)))
       .catch(err => console.error(err));
   }
 
   const getAnimeSearch = async (query) => {
-    const show = await fetch(`https://jikan1.p.rapidapi.com/search/anime?q=${query}&type=Anime&sort=asc&order_by=title&page=1&limit=18 `, options)
+    await fetch(`https://jikan1.p.rapidapi.com/search/anime?q=${query}&type=Anime&sort=asc&order_by=title&page=1&limit=18 `, options)
       .then(response => response.json())
       .then(response => setAnimeList(response.results))
       .catch(err => console.error(err));
 
   }
   const getQuote = async () => {
-const quotes = await fetch('https://animechan.vercel.app/api/random')
-.then(response => response.json())
-.then(quote => setQuote(`${quote.quote} by ${quote.character} in ${quote.anime} `))
-.catch(err => console.error(err));
+    await fetch('https://animechan.vercel.app/api/random')
+      .then(response => response.json())
+      .then(quote => setQuote(`${quote.quote} by ${quote.character} in ${quote.anime} `))
+      .catch(err => console.error(err));
 
   }
 
@@ -42,14 +42,17 @@ const quotes = await fetch('https://animechan.vercel.app/api/random')
 
   useEffect(() => {
     getTopanime();
+    getQuote();
   },
     [])
 
   const searchHandler = (e) => {
     e.preventDefault();
-    getAnimeSearch(search)
+    search.length < 1 ?
+      setAnimeList(animeList.filter(animeList => animeList.key < 0))
+      :
+      getAnimeSearch(search)
   }
-  console.log(quote);
   console.log(topAnime);
   console.log(search);
   console.log(animeList);
@@ -63,8 +66,8 @@ const quotes = await fetch('https://animechan.vercel.app/api/random')
   return (
     <div className="App">
       <Header
-      quote={quote}
-      getQuote={getQuote}
+        quote={quote}
+        getQuote={getQuote}
       />
       <Main
         onDelete={deleteText}

@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Animesearch.css"
-function Animesearch({ search, animeList, setSearch, setAnimeList }) {
+function Animesearch({  animeList }) {
   return (
     <div className='animelist'>
-     
+
       <div className='list'>
-        
+
         {
           animeList.map(anime => (
             <a href={anime.url}
@@ -19,7 +19,7 @@ function Animesearch({ search, animeList, setSearch, setAnimeList }) {
             </a>
           )
           )
-          
+
         }
 
       </div>

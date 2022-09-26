@@ -6,12 +6,7 @@ div.main_container {
    display: block;
    margin-block-start: 2rem;
 }
-@media screen and (min-width:1024px) {
-   div.main_container{
-      margin-block-start: 3rem;
 
-   }
-}
 
 div.main h2 {
    font-family: Montserrat Alternates;
@@ -25,22 +20,9 @@ div.main h2 {
    margin-block-start: 1rem;
    color: hsl(0, 4%, 78%);
 }
-@media screen and (max-width:320px) {
-   div.main h2{
-      font-size: 1.7rem;
-   }
-}
-
-
-
 div.main h2 b {
    font-size: 2.2rem;
    color: black;
-}
-@media screen and (max-width:320px) {
-   div.main h2 b{
-      font-size: 2rem;
-   }
 }
 
 
@@ -51,11 +33,7 @@ div.main h2 b {
    font-size: 3.5rem;
    color: black;
 }
-@media screen and (max-width:320px) {
-   #R{
-      font-size: 3rem;
-   }
-}
+
 
 
 
@@ -86,27 +64,26 @@ div.main input {
    font-family: Poppins;
    font-weight: bolder;
    -webkit-border-top-left-radius: 30px;
--webkit-border-bottom-left-radius: 30px;
--moz-border-radius-topleft: 30px;
--moz-border-radius-bottomleft: 30px;
-border-top-left-radius: 30px;
-border-bottom-left-radius: 30px;
+   -webkit-border-bottom-left-radius: 30px;
+   -moz-border-radius-topleft: 30px;
+   -moz-border-radius-bottomleft: 30px;
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
    position: absolute;
    right: 30px;
 
 }
-@media screen and (min-width:768px) {
-   div.main input{
-      width: 25rem;
-      font-size: 1.2rem;
 
-
-   }
+input:focus {
+   background-color: black;
+   color: white;
 }
+
+
 
 div.faicon {
    height: 33px;
-   width: 32px;
+   width: 40px;
    color: white;
    background-color: chocolate;
    -webkit-border-top-right-radius: 10px;
@@ -123,20 +100,14 @@ div.faicon {
    right: 10px;
 
 }
-@media screen and (min-width:768px) {
-   div.faicon{
-      height: 37px;
-      width: 2.5rem;
-      font-size: 1.3rem;
 
-   }
-}
+
+
 div.times {
    height: 20px;
    width: 2rem;
-   background-color: whitesmoke;
    position: absolute;
-   right: 40px;
+   right: 45px;
    margin-top: 6px;
    margin-bottom: 6px;
    color: red;
@@ -144,28 +115,52 @@ div.times {
    justify-content: center;
    align-items: center;
 }
-@media screen and (min-width:768px) {
-   div.times{
-      transform: translate(-10px, 2px);
-      font-size: 1.3rem;
-
-   }
-}
-/* 
-input:focus {
-   background-color: black;
-   color: white;
-
-} */
 
 
 div.faicon:active {
    background-color: orangered;
 }
 
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:320px) {
+   div.main h2 {
+      font-size: 1.7rem;
+   }
+  
+   #R {
+      font-size: 3rem;
+   }
+   div.main h2 b {
+      font-size: 2rem;
+   }
+}
+
+@media screen and (min-width:768px) {
+   div.times {
+      transform: translate(-10px, 2px);
+      font-size: 1.3rem;
+
+   }
+   div.faicon {
+      height: 37px;
+      width: 2.5rem;
+      font-size: 1.3rem;
+
+   }
+   div.main input {
+      width: 25rem;
+      font-size: 1.2rem;
+
+
+   }
+}
+
 @media screen and (min-width:1024px) {
    div.main_container {
       display: flex;
+      margin-block-start: 3rem;
    }
 
    div.Topanime {
@@ -177,3 +172,4 @@ div.faicon:active {
    }
 
 }
+  

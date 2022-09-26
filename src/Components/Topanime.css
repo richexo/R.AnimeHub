@@ -55,10 +55,6 @@ div.anime a img {
     border-radius: 10px;
 }
 
-@media screen and (min-width:970px) {
-    div.animez {
-        display: block;
-    }
 
     div.para h2 {
         border-bottom: 5px ridge green;
@@ -71,4 +67,11 @@ div.anime a img {
         line-height: normal;
 
     }
-}
+
+    /* MEDIA QUERY */
+    @media screen and (min-width:1024px) {
+        div.animez {
+            display: block;
+        }
+    }
+    
