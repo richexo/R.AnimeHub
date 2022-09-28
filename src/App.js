@@ -4,12 +4,12 @@ import Header from "./Components/Header";
 import Main from "./Components/Main";
 
 function App() {
-  const [topAnime, setTopAnime] = useState([])
+  const [quote, setQuote] = useState([])
   const [search, setSearch] = useState("")
   const [animeList, setAnimeList] = useState([])
-  const [quote, setQuote] = useState([])
+  const [topAnime, setTopAnime] = useState([])
 
-  const options = {
+  const mainKey = {
     method: 'GET',
     headers: {
       'X-RapidAPI-Key': 'de136430b2mshac70eeb22ad8756p1aa626jsnbba4d3e6f4be',
@@ -17,14 +17,14 @@ function App() {
     }
   };
   const getTopanime = async () => {
-    await fetch('https://jikan1.p.rapidapi.com/top/anime/1/bypopularity', options)
+    await fetch('https://jikan1.p.rapidapi.com/top/anime/1/bypopularity', mainKey)
       .then(response => response.json())
       .then(response => setTopAnime(response.top.slice(0, 8)))
       .catch(err => console.error(err));
   }
 
   const getAnimeSearch = async (query) => {
-    await fetch(`https://jikan1.p.rapidapi.com/search/anime?q=${query}&type=Anime&sort=asc&order_by=title&page=1&limit=18 `, options)
+    await fetch(`https://jikan1.p.rapidapi.com/search/anime?q=${query}&type=Anime&sort=asc&order_by=title&page=1&limit=18 `, mainKey)
       .then(response => response.json())
       .then(response => setAnimeList(response.results))
       .catch(err => console.error(err));
@@ -41,23 +41,24 @@ function App() {
 
 
   useEffect(() => {
-    getTopanime();
-    getQuote();
+  getTopanime();
+  getQuote();
   },
-    [])
+ [])
 
   const searchHandler = (e) => {
-    e.preventDefault();
-    search.length < 1 ?
-      setAnimeList(animeList.filter(animeList => animeList.key < 0))
-      :
-      getAnimeSearch(search)
+  e.preventDefault();
+  search.length < 1 ?
+setAnimeList(animeList.filter(animeList => animeList.key < 0))
+:
+getAnimeSearch(search)
   }
+  
   console.log(topAnime);
   console.log(search);
   console.log(animeList);
 
-  const deleteText = ({ search, animeList }) => {
+  const deleteText = () => {
     setSearch("")
     setAnimeList(animeList.filter(animeList => animeList.key < 0))
   }

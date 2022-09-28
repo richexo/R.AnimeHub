@@ -5,13 +5,9 @@ import Topanime from './Topanime'
 import Animesearch from './Animesearch'
 
 function Main({ onDelete, searchHandler, search, animeList, setSearch, setAnimeList, topAnime, setTopAnime }) {
-
-
-
-
   return (
     <div className="main">
-      <h2><b id="R"> R.</b> <b>Anime</b> Hub</h2>
+      <h2><b id="R"> R</b>. Anime Hub</h2>
       <br /><br /><br />
       <form>
         <input type="search"
@@ -19,8 +15,6 @@ function Main({ onDelete, searchHandler, search, animeList, setSearch, setAnimeL
           value={search}
           onChange={e => setSearch(e.target.value)}
         />
-
-
         <div className="times">
           <FaTimes onClick={() => onDelete({ search, animeList })} />
         </div>
