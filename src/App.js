@@ -33,7 +33,7 @@ function App() {
   const getQuote = async () => {
     await fetch('https://animechan.vercel.app/api/random')
       .then(response => response.json())
-      .then(quote => setQuote(`${quote.quote} by ${quote.character} in ${quote.anime} `))
+      .then(quote => setQuote(`${quote.quote}  by ${quote.character} in ${quote.anime} `))
       .catch(err => console.error(err));
 
   }

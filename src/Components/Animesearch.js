@@ -1,13 +1,14 @@
 import React from 'react'
 import "./Animesearch.css"
-function Animesearch({  animeList }) {
+function Animesearch({ search, animeList }) {
   return (
     <div className='animelist'>
 
       <div className='list'>
 
         {
-          animeList.map(anime => (
+          animeList.filter(anime => ((anime.rated !== "Rx") && (anime.rated !== "G")))
+          .map(anime => (
             <a href={anime.url}
               key={anime.mal_id}
               target="_blank"

@@ -26,7 +26,7 @@ function Main({ onDelete, searchHandler, search, animeList, setSearch, setAnimeL
       <div className="main_container">
         <br /><br />
         <div className="animesearch">
-          <Animesearch  animeList={animeList}    />
+          <Animesearch  search={search} animeList={animeList}    />
         </div>
         <br />
         <div className="Topanime">
